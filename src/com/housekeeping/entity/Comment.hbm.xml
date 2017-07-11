@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-7-28 11:54:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.housekeeping.entity.Comment" table="COMMENT">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property generated="never" lazy="false" name="employeeId" type="int">
+			<column name="EMPLOYEEID" />
+		</property>
+		<property generated="never" lazy="false" name="userId" type="int">
+			<column name="USERID" />
+		</property>
+		<property generated="never" lazy="false" name="grade" type="int">
+			<column name="GRADE" />
+		</property>
+		<property generated="never" lazy="false" name="commentTime" type="java.util.Date">
+			<column name="COMMENTTIME" />
+		</property>
+		<property generated="never" lazy="false" name="content" type="java.lang.String">
+			<column name="CONTENT" />
+		</property>
+		<property generated="never" lazy="false" name="employeeName" type="java.lang.String">
+			<column name="employeeName" />
+		</property>
+		<property generated="never" lazy="false" name="userName" type="java.lang.String">
+			<column name="userName" />
+		</property>
+	</class>
+</hibernate-mapping>

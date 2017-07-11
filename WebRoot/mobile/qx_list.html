@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>微家政</title>
+    <link href="css/themes/default/jquery.mobile-1.3.2.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.3.2.min.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            //获得文本框对象
+            var t = $(".text_box");
+            //数量增加操作
+            $(".add").click(function () {
+
+                t.val(parseInt(t.val()) + 1)
+                if (parseInt(t.val()) != 1) {
+                    $('.min').attr('disabled', false);
+                }
+                setTotal();
+            })
+            //数量减少操作
+            $(".min").click(function () {
+                t.val(parseInt(t.val()) - 1);
+                if (parseInt(t.val()) == 1) {
+                    $('.min').attr('disabled', true);
+                }
+                setTotal();
+            })
+            //计算操作
+            function setTotal() {
+                $(".total").html((parseInt(t.val()) * 3.95).toFixed(2)); //toFixed()是保留小数点的函数很实用哦
+            }
+            //初始化
+            setTotal();
+        })
+    </script>
+</head>
+<body>
+    <div data-role="page" id="logopage">
+        <div data-role="header" data-theme="b">
+            <h1 style="width: 100%; text-align: center; margin-left: 0">
+                家电清洗
+            </h1>
+            <a href="#" data-rel="back" data-ajax="false" data-corners="false" data-shadow="false"
+                class="header_btn_a">
+                <img src="images/back.png" /></a> <a href="#" data-corners="false" data-shadow="false"
+                    class="header_btn_a">
+                    <img src="images/phone.png" />
+                </a>
+        </div>
+        <!-- /header -->
+        <div class="ui-content" role="main">
+            <div data-role="collapsible" data-icon="arrow-d" data-iconpos="right" data-inset="false">
+                <h4>
+                    空调清洗<br />
+                    <span class="font-12">专业师傅上门清洗，含室内机壳及过滤网清洁， 风机/<br />
+                        风板/风道/风轮/翘片/散热片等清洁,暂不涉及维修。</span>
+                </h4>
+                <ul data-role="listview" data-inset="false" data-theme="d" style="margin-left: 0.1%;
+                    margin-right: 0.1%">
+                    <li><a href="#"><span>挂壁</span>
+                        <div class="ui-grid-b li_right" style="border: 1px solid #1491C5; height: 30px; width: 100px;
+                            background: #1491C5">
+                            <div class="ui-block-a min" style="width: 35%; text-align: center; border: 1px solid #1491C5;
+                                padding: 4px; background: #1491C5">
+                                <img src="images/jian.png" style="width: 15px; padding-top: 3px" />
+                            </div>
+                            <div class="ui-block-b" style="background: #fff; width: 30%; text-align: center;">
+                                <input class="text_box" name="" type="text" value="4" style="text-align: center;" />
+                            </div>
+                            <div class="ui-block-c add" style="width: 35%; text-align: center; border: 1px solid #1491C5;
+                                padding: 4px; background: #1491C5">
+                                <img src="images/add.png" style="width: 15px; padding-top: 3px" />
+                            </div>
+                        </div>
+                        <br />
+                        <span>特惠价：<span class="blue">￥150</span>/台</span><br />
+                        <span>市场价：￥250/台</span><br />
+                    </a></li>
+                    <li><a href="#"><span>柜式</span><div class="ui-grid-b li_right" style="border: 1px solid #1491C5;
+                        height: 30px; width: 100px; background: #1491C5">
+                        <div class="ui-block-a min" style="width: 35%; text-align: center; border: 1px solid #1491C5;
+                            padding: 4px; background: #1491C5">
+                            <img src="images/jian.png" style="width: 15px; padding-top: 3px" />
+                        </div>
+                        <div class="ui-block-b" style="background: #fff; width: 30%; text-align: center;">
+                            <input class="text_box" name="" type="text" value="4" style="text-align: center;" />
+                        </div>
+                        <div class="ui-block-c add" style="width: 35%; text-align: center; border: 1px solid #1491C5;
+                            padding: 4px; background: #1491C5">
+                            <img src="images/add.png" style="width: 15px; padding-top: 3px" />
+                        </div>
+                    </div>
+                        <br />
+                        <span>特惠价：<span class="blue">￥150</span>/台</span><br />
+                        <span>市场价：￥250/台</span><br />
+                    </a></li>
+                    <li><a href="#"><span>中央空调</span><div class="ui-grid-b li_right" style="border: 1px solid #1491C5;
+                        height: 30px; width: 100px; background: #1491C5">
+                        <div class="ui-block-a min" style="width: 35%; text-align: center; border: 1px solid #1491C5;
+                            padding: 4px; background: #1491C5">
+                            <img src="images/jian.png" style="width: 15px; padding-top: 3px" />
+                        </div>
+                        <div class="ui-block-b" style="background: #fff; width: 30%; text-align: center;">
+                            <input class="text_box" name="" type="text" value="4" style="text-align: center;" />
+                        </div>
+                        <div class="ui-block-c add" style="width: 35%; text-align: center; border: 1px solid #1491C5;
+                            padding: 4px; background: #1491C5">
+                            <img src="images/add.png" style="width: 15px; padding-top: 3px" />
+                        </div>
+                    </div>
+                        <br />
+                        <span>特惠价：<span class="blue">￥150</span>/台</span><br />
+                        <span>市场价：￥250/台</span><br />
+                    </a></li>
+                </ul>
+            </div>
+            <div data-role="collapsible" data-icon="arrow-d" data-iconpos="right" data-inset="false">
+                <h4>
+                    油烟机清洗<br />
+                    <span class="font-12">专业师傅上门拆装，深度清洁内部油污，打扫作业区域<br />
+                        卫生，暂不涉及维修。 </span>
+                </h4>
+            </div>
+            <div data-role="collapsible" data-icon="arrow-d" data-iconpos="right" data-inset="false">
+                <h4>
+                    冰箱除臭<br />
+                    <span class="font-12">冰箱外壁、门封擦拭、消毒，内室除霜、去污，搁架、<br /> 果蔬盒、抽屉等可拆卸部件消毒清洗。 </span>
+                </h4>
+            </div>
+            <div data-role="collapsible" data-icon="arrow-d" data-iconpos="right" data-inset="false">
+                <h4>
+                    微波炉清洗<br />
+                    <span class="font-12">采用中性环保清洁液，包含微波炉外壁擦拭，内室污垢<br />处理，转盘、旋转架消毒清洗。 </span>
+                </h4>
+            </div>
+            <div data-role="collapsible" data-icon="arrow-d" data-iconpos="right" data-inset="false">
+                <h4>
+                    电烤箱清洗<br />
+                    <span class="font-12">采用中性环保清洁液，包含微波炉外壁擦拭，内室污垢<br />处理，烤网、烤架、底盘消毒清洗。</span>
+                </h4>
+            </div>
+        </div>
+        <!-- /content -->
+        <div data-role="footer" data-position="fixed" data-theme="c">
+            <div class="ui-content">
+                <a href="qx_show.html" data-ajax="false" data-role="button" data-theme="e" class="footer_btn_a"
+                    style="color: #fff">下一步</a>
+            </div>
+        </div>
+    </div>
+    <!-- /page -->
+</body>
+</html>

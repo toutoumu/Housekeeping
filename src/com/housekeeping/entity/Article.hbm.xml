@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-7-28 11:54:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.housekeeping.entity.Article" table="ARTICLE">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property generated="never" lazy="false" name="categoryId" type="int">
+			<column name="CATEGORYID" />
+		</property>
+		<property generated="never" lazy="false" name="title" type="java.lang.String">
+			<column name="TITLE" />
+		</property>
+		<property generated="never" lazy="false" name="content" type="string" length="8000">
+			<column name="CONTENT" />
+		</property>
+		<property generated="never" lazy="false" name="createTime" type="java.util.Date">
+			<column name="CREATETIME" />
+		</property>
+		<property generated="never" lazy="false" name="updateTime" type="java.util.Date">
+			<column name="UPDATETIME" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>微家政</title>
+    <link href="css/themes/default/jquery.mobile-1.3.2.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link href="css/climacons.css" rel="stylesheet" type="text/css" />
+    <link href="css/component.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.3.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/boxgrid.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var $ = jQuery.noConflict();
+        $(window).load(function () {
+            $('.panels_slider').flexslider({
+                animation: "slide",
+                directionNav: false,
+                controlNav: true,
+                animationLoop: false,
+                slideToStart: 1,
+                animationDuration: 300,
+                slideshow: false
+            });
+        });
+    </script>
+</head>
+<body>
+    <div data-role="page" id="logopage">
+        <div data-role="header" data-theme="b">
+            <h1>
+                我的微家政
+            </h1>
+            <a href="#" data-corners="false" data-shadow="false" class="header_btn_a"></a><a
+                href="#" data-corners="false" data-shadow="false" class="header_btn_a">
+                <img src="images/phone.png" />
+            </a>
+        </div>
+        <!-- /header -->
+        <div data-role="content" style="margin: 0; padding: 0;">
+            <div id="main_panels">
+                <div class="panels_slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="images/wjz_bg.png" alt="" title="" border="0" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="main_text">
+                    <a href="#" data-corners="false" data-ajax="false" style="color: #fff">13751708888</a>
+                    <p>
+                        积分：1832</p>
+                </div>
+            </div>
+            <ul data-role="listview" data-inset="true" style="margin: 0.5em;">
+                <li data-icon="forward"><a href="my_order_search.html" data-ajax="false">
+                    <img src="images/wjz01.png" class="listview_li_img_l2"><h4 class="li_h4">
+                        订单查询</h4>
+                </a></li>
+            </ul>
+            <ul data-role="listview" data-inset="true" style="margin: 0.5em">
+                <li data-icon="forward"><a href="my_address.html" data-ajax="false">
+                    <img src="images/wjz02.png" class="listview_li_img_l2"><h4 class="li_h4">
+                        常用地址</h4>
+                </a></li>
+            </ul>
+            <ul data-role="listview" data-inset="true" style="margin: 0.5em">
+                <li data-icon="forward"><a href="#">
+                    <img src="images/wjz03.png" class="listview_li_img_l2"><h4 class="li_h4">
+                        我的积分</h4>
+                </a></li>
+            </ul>
+            <ul data-role="listview" data-inset="true" style="margin: 0.5em">
+                <li data-icon="forward"><a href="my_collection.html" data-ajax="false">
+                    <img src="images/wjz04.png" class="listview_li_img_l2"><h4 class="li_h4">
+                        我的收藏</h4>
+                </a></li>
+            </ul>
+            <ul data-role="listview" data-inset="true" style="margin: 0.5em">
+                <li data-icon="forward"><a href="#">
+                    <img src="images/wjz05.png" class="listview_li_img_l2"><h4 class="li_h4">
+                        关于微家政</h4>
+                </a></li>
+            </ul>
+        </div>
+        <!-- /content -->
+        <div data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul class="footer-font">
+                    <li><a href="index.html"  data-ajax="false">
+                        <img src="images/footer_home.png" alt="" title="" border="0" /><br />
+                        首页</a></li>
+                    <li><a href="my_order_search.html"  data-ajax="false">
+                        <img src="images/footer_myorder.png" alt="" title="" border="0" /><br />
+                        我的订单</a></li>
+                    <li><a href="bj_order_add.html"  data-ajax="false">
+                        <img src="images/footer_order.png" alt="" title="" border="0" /><br />
+                        快速下单</a></li>
+                    <li><a href="user_index.html"  data-ajax="false">
+                        <img src="images/footer_user.png" alt="" title="" border="0" /><br />
+                        会员</a></li>
+                    <li><a href="#anylink" class="active"  data-ajax="false">
+                        <img src="images/footer_myhome1.png" alt="" title="" border="0" /><br />
+                        我的微家政</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /page -->
+</body>
+</html>

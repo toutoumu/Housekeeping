@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<!-- 这个是和实体相关的dao,所以scope是prototype的每个实体对应一个对象 -->
+	<bean id="hibernateEntityDao" class="com.hibernate.dao.extend.HibernateEntityDao"
+		scope="prototype" lazy-init="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<!--这个和具体实体无关,所有dao共享 -->
+	<bean id="hibernateGenericDao" class="com.hibernate.dao.generic.HibernateGenericDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="addressDao" class="com.housekeeping.dao.impl.AddressDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Address" />
+	</bean>
+
+	<bean id="articleDao" class="com.housekeeping.dao.impl.ArticleDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Article" />
+	</bean>
+	<bean id="articleCategoryDao" class="com.housekeeping.dao.impl.ArticleCatetoryDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.ArticleCategory" />
+	</bean>
+	<bean id="businessDao" class="com.housekeeping.dao.impl.BusinessDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Business" />
+	</bean>
+	<bean id="businessCategory_EmployeeDao" class="com.housekeeping.dao.impl.BusinessCategory_EmployeeDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.BusinessCategory_Employee" />
+	</bean>
+	<bean id="businessCategoryDao" class="com.housekeeping.dao.impl.BusinessCategoryDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.BusinessCategory" />
+	</bean>
+	<bean id="businessDetailDao" class="com.housekeeping.dao.impl.BusinessDetailDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.BusinessDetail" />
+	</bean>
+	<bean id="captchaDao" class="com.housekeeping.dao.impl.CaptchaDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Captcha" />
+	</bean>
+	<bean id="commentDao" class="com.housekeeping.dao.impl.CommentDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Comment" />
+	</bean>
+	<bean id="employeeDao" class="com.housekeeping.dao.impl.EmployeeDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Employee" />
+	</bean>
+	<bean id="manager_MenuDao" class="com.housekeeping.dao.impl.Manager_MenuDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Manager_Menu" />
+	</bean>
+	<bean id="managerDao" class="com.housekeeping.dao.impl.ManagerDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Manager" />
+	</bean>
+	<bean id="menuDao" class="com.housekeeping.dao.impl.MenuDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Menu" />
+	</bean>
+	<bean id="messageDao" class="com.housekeeping.dao.impl.MessageDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Message" />
+	</bean>
+	<bean id="order_EmployeeDao" class="com.housekeeping.dao.impl.Order_EmployeeDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Order_Employee" />
+	</bean>
+	<bean id="orderDao" class="com.housekeeping.dao.impl.OrderDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Order" />
+	</bean>
+	<bean id="orderDetailDao" class="com.housekeeping.dao.impl.OrderDetailDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.OrderDetail" />
+	</bean>
+	<bean id="photoDao" class="com.housekeeping.dao.impl.PhotoDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Photo" />
+	</bean>
+
+	<bean id="rechargeDao" class="com.housekeeping.dao.impl.RechargeDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Recharge" />
+	</bean>
+	<bean id="regionDao" class="com.housekeeping.dao.impl.RegionDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.Region" />
+	</bean>
+	<bean id="scoreDetailDao" class="com.housekeeping.dao.impl.ScoreDetailDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.ScoreDetail" />
+	</bean>
+
+	<bean id="userDao" class="com.housekeeping.dao.impl.UserDao">
+		<property name="entityDao" ref="hibernateEntityDao" />
+		<property name="genericDao" ref="hibernateGenericDao" />
+		<constructor-arg value="com.housekeeping.entity.User" />
+	</bean>
+</beans>

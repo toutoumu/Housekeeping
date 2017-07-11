@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>微家政</title>
+    <link href="css/themes/default/jquery.mobile-1.3.2.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.3.2.min.js" type="text/javascript"></script>
+    <script>
+        function setTab(name, cursel, n) {
+            for (i = 1; i <= n; i++) {
+                var menu = document.getElementById(name + i);
+                var con = document.getElementById("con_" + name + "_" + i);
+                menu.className = i == cursel ? "active" : "";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div data-role="page" id="logopage">
+        <div data-role="header" data-theme="b">
+            <h1>
+                新居开荒
+            </h1>
+            <a href="#" data-rel="back" data-ajax="false" data-corners="false" data-shadow="false"
+                class="header_btn_a">
+                <img src="images/back.png" /></a> <a href="#" data-corners="false" data-shadow="false"
+                    class="header_btn_a">
+                    <img src="images/phone.png" />
+                </a>
+        </div>
+        <!-- /header -->
+        <div class="ui-content" role="main">
+            <div>
+                5元/平米，新居装修后的保洁</div>
+            <form method="post" action="">
+            <ul data-role="listview" data-split-icon="gear" data-theme="d" data-inset="true">
+                <li>
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                预约时间
+                            </td>
+                            <td>
+                                <input type="text" name="yytime" id="yytime" value="2014年8月5号16时" />
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <table width="100%">
+                        <tr>
+                            <td width="25%">
+                                房屋大小
+                            </td>
+                            <td width="75%">
+                                <div data-role="navbar">
+                                    <ul class="navbar_ul2">
+                                        <li id="Li1" class="active" onclick="setTab('Li',1,3)"><a href="#anylink" class="left-radius">小于80平</a></li>
+                                        <li id="Li2" onclick="setTab('Li',2,3)"><a href="#anylink">80到150平</a></li>
+                                        <li id="Li3" onclick="setTab('Li',3,3)"><a href="#anylink"  class="right-radius" >大于150平</a></li>
+                                    </ul>
+                                </div>
+                                <p style="padding-top:10px">提示：微家政服务人员会进行实地考量</p>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+            <ul data-role="listview" data-split-icon="gear" data-theme="d" data-inset="true">
+                <li>
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                地域选择
+                            </td>
+                            <td>
+                                <fieldset data-role="controlgroup" data-type="horizontal">
+                                    <select name="province" id="province" data-mini="true" data-corners="true">
+                                        <option value="mon">广东省</option>
+                                    </select>
+                                    <select name="city" id="city" data-mini="true">
+                                        <option value="08">深圳市</option>
+                                        <option value="08">广州市</option>
+                                    </select>
+                                    <select name="section" id="section" data-mini="true">
+                                        <option value="08">南山区</option>
+                                    </select>
+                                </fieldset>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                街道地址
+                            </td>
+                            <td>
+                                <input type="text" name="fname" id="Text4" value="高新园北区迈科龙大厦901室" />
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                特殊要求
+                            </td>
+                            <td>
+                                <input type="text" name="fname" id="Text5" value="请保洁阿姨准时到达" />
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+            </form>
+            <div>
+                备注：此处文案可编辑此处文案可编辑此处文案</div>
+            <h4 style="text-align: center; color: #E24D00">
+                订单金额：￥425</h4>
+        </div>
+        <!-- /content -->
+        <div data-role="footer" data-position="fixed" data-theme="c">
+            <div class="ui-content">
+                <a href="bj_order_submit_success.html" data-role="button" data-theme="e" class="footer_btn_a"
+                    style="color: #fff">提交</a>
+            </div>
+        </div>
+    </div>
+    <!-- /page -->
+</body>
+</html>

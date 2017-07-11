@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-7-28 11:54:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.housekeeping.entity.BusinessCategory" table="BUSINESSCATEGORY">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME"  unique="true"/>
+		</property>
+		<property name="visiblity" type="boolean">
+			<column name="VISIBLITY" />
+		</property>
+		<property name="isDefault" type="boolean" access="field">
+			<column name="ISDEFAULT" />
+		</property>
+		<property name="imagePath" type="java.lang.String">
+			<column name="IMAGEPATH" />
+		</property>
+		<property name="remark" type="java.lang.String">
+			<column name="REMARK" />
+		</property>
+		<property name="pushMessage" type="boolean">
+			<column name="PUSHMESSAGE" />
+		</property>
+	</class>
+</hibernate-mapping>

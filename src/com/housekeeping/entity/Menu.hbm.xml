@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-8-16 11:51:40 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="com.housekeeping.entity.Menu" table="MENU" lazy="false">
+  <id name="id" type="int">
+   <column name="ID"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="title" type="java.lang.String">
+   <column name="TITLE"/>
+  </property>
+  <property generated="never" lazy="false" name="type" type="integer">
+   <column name="TYPE"/>
+  </property>
+  <property generated="never" lazy="false" name="url" type="java.lang.String">
+   <column name="URL" unique="true"/>
+  </property>
+  <property generated="never" lazy="false" name="parent" type="int">
+   <column name="PARENT"/>
+  </property>
+ </class>
+</hibernate-mapping>

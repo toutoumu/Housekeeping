@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-7-28 11:54:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="com.housekeeping.entity.Business" table="BUSINESS">
+  <id name="id" type="int">
+   <column name="ID"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="businessCategoryId" type="int">
+   <column name="BUSINESSCATEGORYID"/>
+  </property>
+  <property generated="never" lazy="false" name="name" type="java.lang.String">
+   <column name="NAME"/>
+  </property>
+  <property generated="never" lazy="false" name="imagePath" type="java.lang.String">
+   <column name="IMAGEPATH"/>
+  </property>
+  <property generated="never" lazy="false" name="remark" type="java.lang.String">
+   <column name="REMARK"/>
+  </property>
+ </class>
+</hibernate-mapping>

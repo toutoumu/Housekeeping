@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd      
+	http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+	http://cxf.apache.org/jaxrs
+    http://cxf.apache.org/schemas/jaxrs.xsd">
+	<!-- Import Apache CXF Bean Definition -->
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+	<bean id="addressServiceBean" class="com.housekeeping.service.impl.AddressService">
+		<property name="addressDao" ref="addressDao" />
+	</bean>
+	<jaxrs:server id="AddressService" address="/AddressService">
+		<jaxrs:serviceBeans>
+			<ref bean="addressServiceBean" />
+		</jaxrs:serviceBeans>
+
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="CaptchaServiceBean" class="com.housekeeping.service.impl.CaptchaService">
+		<property name="captchaDao" ref="captchaDao" />
+	</bean>
+	<jaxrs:server id="CaptchaService" address="/CaptchaService">
+		<jaxrs:serviceBeans>
+			<ref bean="CaptchaServiceBean" />
+		</jaxrs:serviceBeans>
+
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="articleCategoryServiceBean" class="com.housekeeping.service.impl.ArticleCategoryService">
+		<property name="articleCategoryDao" ref="articleCategoryDao" />
+	</bean>
+	<jaxrs:server id="articleCategoryService" address="/ArticleCategoryService">
+		<jaxrs:serviceBeans>
+			<ref bean="articleCategoryServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="articleServiceBean" class="com.housekeeping.service.impl.ArticleService">
+		<property name="articleDao" ref="articleDao" />
+	</bean>
+	<jaxrs:server id="articleService" address="/ArticleService">
+		<jaxrs:serviceBeans>
+			<ref bean="articleServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="businessCategory_EmployeeServiceBean" class="com.housekeeping.service.impl.BusinessCategory_EmployeeService">
+		<property name="businessCategory_EmployeeDao" ref="businessCategory_EmployeeDao" />
+	</bean>
+	<jaxrs:server id="businessCategory_EmployeeService" address="/BusinessCategory_EmployeeService">
+		<jaxrs:serviceBeans>
+			<ref bean="businessCategory_EmployeeServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+
+
+	<bean id="businessCategoryServiceBean" class="com.housekeeping.service.impl.BusinessCategoryService">
+		<property name="businessCategoryDao" ref="businessCategoryDao" />
+	</bean>
+	<jaxrs:server id="businessCategoryService" address="/BusinessCategoryService">
+		<jaxrs:serviceBeans>
+			<ref bean="businessCategoryServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+
+
+
+
+	<bean id="businessDetailServiceBean" class="com.housekeeping.service.impl.BusinessDetailService">
+		<property name="businessDetailDao" ref="businessDetailDao" />
+	</bean>
+	<jaxrs:server id="businessDetailService" address="/BusinessDetailService">
+		<jaxrs:serviceBeans>
+			<ref bean="businessDetailServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="businessServiceBean" class="com.housekeeping.service.impl.BusinessService">
+		<property name="businessDao" ref="businessDao" />
+	</bean>
+	<jaxrs:server id="businessService" address="/BusinessService">
+		<jaxrs:serviceBeans>
+			<ref bean="businessServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="commentServiceBean" class="com.housekeeping.service.impl.CommentService">
+		<property name="commentDao" ref="commentDao" />
+	</bean>
+	<jaxrs:server id="CommentService" address="/CommentService">
+		<jaxrs:serviceBeans>
+			<ref bean="commentServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="employeeServiceBean" class="com.housekeeping.service.impl.EmployeeService">
+		<property name="employeeDao" ref="employeeDao" />
+	</bean>
+	<jaxrs:server id="EmployeeService" address="/EmployeeService">
+		<jaxrs:serviceBeans>
+			<ref bean="employeeServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+
+	<bean id="manager_MenuServiceBean" class="com.housekeeping.service.impl.Manager_MenuService">
+		<property name="manager_MenuDao" ref="manager_MenuDao" />
+	</bean>
+	<jaxrs:server id="Manager_MenuService" address="/Manager_MenuService">
+		<jaxrs:serviceBeans>
+			<ref bean="manager_MenuServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="managerServiceBean" class="com.housekeeping.service.impl.ManagerService">
+		<property name="managerDao" ref="managerDao" />
+	</bean>
+	<jaxrs:server id="ManagerService" address="/ManagerService">
+		<jaxrs:serviceBeans>
+			<ref bean="managerServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+
+	<bean id="menuServiceBean" class="com.housekeeping.service.impl.MenuService">
+		<property name="menuDao" ref="menuDao" />
+	</bean>
+	<jaxrs:server id="MenuService" address="/MenuService">
+		<jaxrs:serviceBeans>
+			<ref bean="menuServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="messageServiceBean" class="com.housekeeping.service.impl.MessageService">
+		<property name="messageDao" ref="messageDao" />
+	</bean>
+	<jaxrs:server id="MessageService" address="/MessageService">
+		<jaxrs:serviceBeans>
+			<ref bean="messageServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="order_EmployeeServiceBean" class="com.housekeeping.service.impl.Order_EmployeeService">
+		<property name="order_EmployeeDao" ref="order_EmployeeDao" />
+	</bean>
+	<jaxrs:server id="Order_EmployeeService" address="/Order_EmployeeService">
+		<jaxrs:serviceBeans>
+			<ref bean="order_EmployeeServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="orderServiceBean" class="com.housekeeping.service.impl.OrderService">
+		<property name="orderDao" ref="orderDao" />
+	</bean>
+	<jaxrs:server id="OrderService" address="/OrderService">
+		<jaxrs:serviceBeans>
+			<ref bean="orderServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+
+
+	<bean id="orderDetailServiceBean" class="com.housekeeping.service.impl.OrderDetailService">
+		<property name="orderDetailDao" ref="orderDetailDao" />
+	</bean>
+	<jaxrs:server id="OrderDetailService" address="/OrderDetailService">
+		<jaxrs:serviceBeans>
+			<ref bean="orderDetailServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+
+
+	<bean id="PhotoServiceBean" class="com.housekeeping.service.impl.PhotoService">
+		<property name="photoDao" ref="photoDao" />
+	</bean>
+	<jaxrs:server id="PhotoService" address="/PhotoService">
+		<jaxrs:serviceBeans>
+			<ref bean="PhotoServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+
+
+
+	<bean id="RechargeServiceBean" class="com.housekeeping.service.impl.RechargeService">
+		<property name="rechargeDao" ref="rechargeDao" />
+	</bean>
+	<jaxrs:server id="RechargeService" address="/RechargeService">
+		<jaxrs:serviceBeans>
+			<ref bean="RechargeServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+	<bean id="RegionServiceBean" class="com.housekeeping.service.impl.RegionService">
+		<property name="regionDao" ref="regionDao" />
+	</bean>
+	<jaxrs:server id="RegionService" address="/RegionService">
+		<jaxrs:serviceBeans>
+			<ref bean="RegionServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+
+	<bean id="ScoreDetailServiceBean" class="com.housekeeping.service.impl.ScoreDetailService">
+		<property name="scoreDetailDao" ref="scoreDetailDao" />
+	</bean>
+	<jaxrs:server id="ScoreDetailService" address="/ScoreDetailService">
+		<jaxrs:serviceBeans>
+			<ref bean="ScoreDetailServiceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+
+
+	<bean id="userServiceBean" class="com.housekeeping.service.impl.UserService">
+		<property name="userDao" ref="userDao" />
+	</bean>
+	<jaxrs:server id="userService" address="/UserService">
+		<jaxrs:serviceBeans>
+			<ref bean="userServiceBean" />
+		</jaxrs:serviceBeans>
+
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+</beans>  

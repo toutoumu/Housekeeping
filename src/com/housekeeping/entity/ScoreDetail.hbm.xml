@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-10-16 22:32:13 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.housekeeping.entity.ScoreDetail" table="SCOREDETAIL">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property name="userId" type="int">
+			<column name="USERID" />
+		</property>
+		<property name="description" type="java.lang.String">
+			<column name="DESCRIPTION" />
+		</property>
+		<property name="time" type="java.util.Date">
+			<column name="TIME" />
+		</property>
+		<property name="score" type="int">
+			<column name="SCORE" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,137 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Housekeeping:Web exploded">
+    <output-path>$PROJECT_DIR$/classes/artifacts/Housekeeping_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Housekeeping/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Housekeeping" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="junit4" module-name="Housekeeping" />
+          <element id="library" level="module" name="activemq-broker-5.8.0.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="activemq-client-5.8.0.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="activemq-openwire-legacy-5.8.0.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="antlr-2.7.7.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="aopalliance-1.0.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="asm-3.3.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="c3p0-0.9.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="CCP_REST_SDK_JAVA_v2.6.2r.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cglib-2.2.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="com.springsource.org.apache.commons.pool-1.5.3.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="commons-beanutils-1.8.3.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="commons-codec-1.9.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="commons-collections-3.2.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="commons-dbcp.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="commons-fileupload-1.2.2.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="commons-httpclient-3.0-rc4.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="commons-io-2.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="commons-lang-2.6.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="commons-logging-1.1.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-2.7.11.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-manifest.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-services-sts-core-2.7.11.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-services-ws-discovery-api-2.7.11.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-services-ws-discovery-service-2.7.11.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-services-wsn-api-2.7.11.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-services-wsn-core-2.7.11.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-xjc-boolean-2.6.2.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-xjc-bug671-2.6.2.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-xjc-dv-2.6.2.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-xjc-runtime-2.6.2.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="cxf-xjc-ts-2.6.2.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="dom4j-1.6.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="ehcache-1.2.3.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="ehcache-core-2.5.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="ejb3-persistence.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="FastInfoset-1.2.13.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="geronimo-j2ee-management_1.1_spec-1.0.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="geronimo-javamail_1.4_spec-1.7.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="geronimo-jaxws_2.2_spec-1.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="geronimo-jms_1.1_spec-1.1.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="guava-17.0.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="hawtbuf-1.9.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="hibernate-annotations.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="hibernate-commons-annotations.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="hibernate-core-3.5.5.Final.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="hibernate-entitymanager.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="hibernate-validator.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="hibernate3.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="httpasyncclient-4.0-beta3.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="httpclient-4.2.5.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="httpcore-4.2.4.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="httpcore-nio-4.2.4.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="isorelax-20030108.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="javassist-3.9.0.GA.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="javax.ws.rs-api-2.0-m10.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="jaxb-api-2.2.6.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="jaxb-impl-2.2.6.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="jaxb-xjc-2.2.6.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="jboss-cache-1.4.1.GA.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="jbosscache-core-3.1.0.GA.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="jettison-1.3.5.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="joda-time-2.2.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="jotm.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="js-1.7R2.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="jta-1.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="log4j-1.2.14.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="mina-core-2.0.7.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="mockwebserver-1.5.4.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="msv-core-2011.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="mysql-connector-java-5.0.8.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="neethi-3.0.3.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="oauth-20100527.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="oauth-provider-20100527.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="opensaml-2.6.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="openws-1.5.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="org.springframework.transaction_4.0.2.20140223-RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="oscache-2.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="persistence.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="proxool-0.8.3.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="quartz-2.2.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="quartz-jobs-2.2.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="relaxngDatatype-20020414.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="serializer-2.7.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="slf4j-api-1.7.6.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="slf4j-jdk14-1.7.6.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-aop-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-aspects-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-beans-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-build-src-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-context-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-context-support-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-core-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-expression-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-framework-bom-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-instrument-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-instrument-tomcat-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-jdbc-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-jms-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-messaging-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-orm-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-oxm-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-test-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-tx-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-web-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-webmvc-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-webmvc-portlet-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="spring-websocket-4.0.5.RELEASE.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="stax2-api-3.1.4.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="swarmcache-1.0RC2.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="velocity-1.7.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="woodstox-core-asl-4.2.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="wsdl4j-1.6.3.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="wss4j-1.6.15.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="xapool.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="xml-resolver-1.2.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="xmlbeans-2.6.0.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="xmlschema-core-2.1.0.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="xmlsec-1.5.6.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="xmltooling-1.4.1.jar" module-name="Housekeeping" />
+          <element id="library" level="module" name="xsdlib-2010.1.jar" module-name="Housekeeping" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

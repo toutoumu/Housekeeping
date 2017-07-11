@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-8-10 10:44:09 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.housekeeping.entity.Message" table="MESSAGE">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property name="orderNumber" type="java.lang.String">
+			<column name="orderNumber" />
+		</property>
+		<property name="templateId" type="java.lang.String">
+			<column name="TEMPLATEID" />
+		</property>
+		<property name="parameters" type="java.lang.String">
+			<column name="PARAMETERS" />
+		</property>
+		<property name="phoneNumber" type="java.lang.String">
+			<column name="PHONENUMBER" />
+		</property>
+		<property name="time" type="java.util.Date">
+			<column name="TIME" />
+		</property>
+		<property name="messageType" type="int">
+			<column name="MESSAGETYPE" />
+		</property>
+		<property name="isFinish" type="boolean" access="field">
+			<column name="ISFINISH" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<job-scheduling-data xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_1_8.xsd"
+	version="1.8">
+	<schedule>
+		<job>
+			<name>ReportControlScheduler</name>
+			<group>Report</group>
+			<description>报表控制填报锁</description>
+			<job-class>com.housekeeping.job.TestJob</job-class>
+		</job>
+		<trigger>
+			<simple>
+				<name>report-trigger</name>
+				<group>Report_Group</group>
+				<job-name>ReportControlScheduler</job-name>
+				<job-group>Report</job-group>
+				<start-time>2008-09-03T14:43:00</start-time>
+				<!-- repeat indefinitely every 10 seconds -->
+				<repeat-count>-1</repeat-count>
+				<repeat-interval>1000000</repeat-interval>
+			</simple>
+		</trigger>
+	</schedule>
+</job-scheduling-data> 

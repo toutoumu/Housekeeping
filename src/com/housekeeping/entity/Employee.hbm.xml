@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-7-28 11:54:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.housekeeping.entity.Employee" table="EMPLOYEE">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property generated="never" lazy="false" name="grade" type="double">
+			<column name="GRADE" />
+		</property>
+		<property generated="never" lazy="false" name="age" type="int">
+			<column name="age" />
+		</property>
+		<property generated="never" lazy="false" name="coordinat" type="java.lang.String">
+			<column name="COORDINAT" />
+		</property>
+		<property generated="never" lazy="false" name="serviceTimes" type="int">
+			<column name="SERVICETIMES" />
+		</property>
+		<property generated="never" lazy="false" name="serviceArea" type="java.lang.String">
+			<column name="SERVICEAREA" />
+		</property>
+		<property generated="never" lazy="false" name="photo" type="java.lang.String">
+			<column name="PHOTO" />
+		</property>
+		<property generated="never" lazy="false" name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property generated="never" lazy="false" name="nativeSlace" type="java.lang.String">
+			<column name="NATIVESLACE" />
+		</property>
+		<property generated="never" lazy="false" name="idCard" type="java.lang.String">
+			<column name="IDCARD" />
+		</property>
+		<property generated="never" lazy="false" name="credentialsCategory" type="java.lang.String">
+			<column name="CREDENTIALSCATEGORY" />
+		</property>
+		<property generated="never" lazy="false" name="credentialsNumber" type="java.lang.String">
+			<column name="CREDENTIALSNUMBER" />
+		</property>
+		<property generated="never" lazy="false" name="phoneNumber" type="java.lang.String"
+			unique="true">
+			<column name="PHONENUMBER" unique="true" />
+		</property>
+		<property generated="never" lazy="false" name="businessCategoryId" type="int">
+			<column name="BUSINESSCATEGORYID" />
+		</property>
+		<property generated="never" lazy="false" name="workExperience" type="int">
+			<column name="WORKEXPERIENCE" />
+		</property>
+		<property generated="never" lazy="false" name="relationName" type="java.lang.String">
+			<column name="RELATIONNAME" />
+		</property>
+		<property generated="never" lazy="false" name="relationPhoneNumber" type="java.lang.String">
+			<column name="RELATIONPHONENUMBER" />
+		</property>
+		<property generated="never" lazy="false" name="speciality" type="java.lang.String">
+			<column name="SPECIALITY" />
+		</property>
+		<property generated="never" lazy="false" name="remark" type="java.lang.String">
+			<column name="REMARK" />
+		</property>
+		<property generated="never" lazy="false" name="rank" type="int">
+			<column name="RANK" />
+		</property>
+		<property generated="never" lazy="false" name="state" type="int">
+			<column name="STATE" />
+		</property>
+	</class>
+</hibernate-mapping>

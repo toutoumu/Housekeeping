@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-7-28 11:54:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.housekeeping.entity.Order" table="T_ORDER">
+		<id name="orderNumber" type="java.lang.String">
+			<column name="ORDERNUMBER" />
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="int">
+			<column name="employeeId" default="0"/>
+		</property>
+		<property generated="never" lazy="false" name="employeePhoneNumber" type="java.lang.String">
+			<column name="employeePhoneNumber" />
+		</property>
+		<property generated="never" lazy="false" name="employeeName" type="java.lang.String">
+			<column name="employeeName" />
+		</property>
+		<property name="userId" type="int">
+			<column name="USERID" />
+		</property>
+		<property generated="never" lazy="false" name="orderTime" type="java.util.Date">
+			<column name="ORDERTIME" />
+		</property>
+		<property generated="never" lazy="false" name="workingTime" type="double">
+			<column name="WORKINGTIME" />
+		</property>
+		<property generated="never" lazy="false" name="businessCategoryId" type="int">
+			<column name="BUSINESSCATEGORYID" />
+		</property>
+		<property generated="never" lazy="false" name="businessCategoryName" type="java.lang.String">
+			<column name="BUSINESSCATEGORYNAME" />
+		</property>
+		<property generated="never" lazy="false" name="startTime" type="java.util.Date">
+			<column name="STARTTIME" />
+		</property>
+		<property generated="never" lazy="false" name="address" type="java.lang.String">
+			<column name="ADDRESS" />
+		</property>
+		<property generated="never" lazy="false" name="userName" type="java.lang.String">
+			<column name="USERNAME" />
+		</property>
+		<property generated="never" lazy="false" name="phoneNumber" type="java.lang.String">
+			<column name="PHONENUMBER" />
+		</property>
+		<property generated="never" lazy="false" name="orderPrice" type="double">
+			<column name="ORDERPRICE" />
+		</property>
+		<property generated="never" lazy="false" name="orderState" type="int">
+			<column name="ORDERSTATE" />
+		</property>
+		<property generated="never" lazy="false" name="paymentState" type="int">
+			<column name="PAYMENTSTATE" />
+		</property>
+		<property generated="never" lazy="false" name="remark" type="java.lang.String">
+			<column name="REMARK" />
+		</property>
+		<property generated="never" lazy="false" name="area" type="double">
+			<column name="AREA" />
+		</property>
+		<property generated="never" lazy="false" name="payway" type="int">
+			<column name="payway" />
+		</property>
+	</class>
+</hibernate-mapping>

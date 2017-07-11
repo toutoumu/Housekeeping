@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-7-28 11:54:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.housekeeping.entity.OrderDetail" table="ORDERDETAIL">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property name="orderNumber" type="java.lang.String">
+			<column name="orderNumber" />
+		</property>
+		<property name="businessDetailName" type="java.lang.String">
+			<column name="businessDetailName" />
+		</property>
+		<property name="businessDetailId" type="int">
+			<column name="BUSINESSDETAILID" />
+		</property>
+		<property name="businessId" type="int">
+			<column name="BUSINESSID" />
+		</property>
+		<property name="price" type="double">
+			<column name="PRICE" />
+		</property>
+		<property name="count" type="int">
+			<column name="COUNT" />
+		</property>
+		<property name="unit" type="java.lang.String">
+			<column name="UNIT" />
+		</property>
+	</class>
+</hibernate-mapping>

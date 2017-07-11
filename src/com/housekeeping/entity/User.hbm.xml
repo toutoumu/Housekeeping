@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-8-8 22:01:03 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.housekeeping.entity.User" table="T_USER">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property generated="never" lazy="false" name="userName" type="java.lang.String">
+			<column name="USERNAME" unique="true" />
+		</property>
+		<property generated="never" lazy="false" name="city" type="java.lang.String">
+			<column name="CITY" />
+		</property>
+		<!-- <property name="address" type="java.lang.String"> <column name="ADDRESS" /> </property> -->
+		<property generated="never" lazy="false" name="phoneNumber" type="java.lang.String"
+			unique="true">
+			<column name="PHONENUMBER" unique="true" />
+		</property>
+		<property generated="never" lazy="false" name="password" type="java.lang.String">
+			<column name="PASSWORD" />
+		</property>
+		<property generated="never" lazy="false" name="grade" type="int">
+			<column name="GRADE" />
+		</property>
+		<property generated="never" lazy="false" name="consumeTimes" type="int">
+			<column name="CONSUMETIMES" />
+		</property>
+		<property generated="never" lazy="false" name="balance" type="double">
+			<column name="BALANCE" />
+		</property>
+		<property generated="never" lazy="false" name="score" type="int">
+			<column name="SCORE" />
+		</property>
+		<property generated="never" lazy="false" name="createTime" type="java.util.Date">
+			<column name="createTime" />
+		</property>
+	</class>
+</hibernate-mapping>

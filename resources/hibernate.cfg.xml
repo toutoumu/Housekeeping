@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!-- hibernate- configuration是连接配置文件的根元素 -->
+<hibernate-configuration>
+  <session-factory name="">
+    <!-- 指定连接数据库所用的驱动 -->
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <!-- 指定连接数据库的url，hibernate连接的数据库名 -->
+    <property name="connection.url">jdbc:mysql://localhost/test</property>
+    <property name="connection.useUnicode">true</property>
+    <property name="connection.characterEncoding">gbk</property>
+    <property name="defaultAutoCommit">true</property>
+    <!-- 指定连接数据库的用户名 -->
+    <property name="connection.username">liubin</property>
+    <!-- 指定连接数据库的密码 -->
+    <property name="connection.password">liubin</property>
+    <!-- C3P0连接池设定 -->
+    <property name="hibernate.connection.provider_class">
+      org.hibernate.connection.C3P0ConnectionProvider
+    </property>
+    <!-- 指定连接池里最大连接数 -->
+    <property name="hibernate.c3p0.max_size">10</property>
+    <!-- 指定连接池里最小连接数 -->
+    <property name="hibernate.c3p0.min_size">1</property>
+    <!-- 指定连接池里连接的超时时长 -->
+    <property name="hibernate.c3p0.timeout">1800</property>
+    <!-- 指定连接池里最大缓存多少个Statement对象 -->
+    <property name="hibernate.c3p0.max_statements">100</property>
+    <property name="hibernate.c3p0.idle_test_period">500</property>
+    <property name="hibernate.c3p0.acquire_increment">2</property>
+    <property name="hibernate.c3p0.validate">true</property>
+    <property name="hibernate.c3p0.preferredTestQuery ">select 1</property>
+    <property name="hibernate.c3p0.idleConnectionTestPeriod">18000</property>
+    <property name="hibernate.c3p0.maxIdleTime">25000</property>
+    <property name="hibernate.c3p0.testConnectionOnCheckout">true</property>
+    <!-- 指定数据库方言
+   <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+   <property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+   下面这个适用于5.x -->
+    <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+    <!-- 根据需要自动创建数据库 -->
+    <property name="hbm2ddl.auto">update</property>
+    <!-- 显示Hibernate持久化操作所生成的SQL -->
+    <property name="show_sql">true</property>
+    <!-- 将SQL脚本进行格式化后再输出 -->
+    <property name="hibernate.format_sql">true</property>
+    <!-- 罗列所有的映射文件 -->
+    <mapping resource="com/housekeeping/entity/Article.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/ArticleCategory.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Business.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/BusinessCategory.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/BusinessCategory_Employee.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/BusinessDetail.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Comment.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Employee.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Manager_Menu.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Manager.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Menu.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Order.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/OrderDetail.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/User.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Order_Employee.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Region.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Captcha.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Address.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Message.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Recharge.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/ScoreDetail.hbm.xml"/>
+    <mapping resource="com/housekeeping/entity/Photo.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
